@@ -6,8 +6,7 @@ function book(title, author, pages, read) {
 }
 
 book.prototype.info = function() {
-    return `${title} by ${author}, ${pages} pages, ${read}`;
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
 }
 
-const bookOne = book('The Hobbit', 'J.R.R. Tolkien', '295', 'read');
-console.log(bookOne);
+const bookOne = new book('The Hobbit', 'J.R.R. Tolkien', 295, 'read');
