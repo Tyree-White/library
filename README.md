@@ -1,1 +1,1 @@
-# library
+In this project I will be creating a library using HTML, CSS, and mainly JavaScript. I will be applying my newly obtained knowledge of object constructors, prototypes, and instantiation. 
