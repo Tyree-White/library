@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 20vh;
+    background: #e5e7eb;
+    box-shadow: lightgray 1px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
