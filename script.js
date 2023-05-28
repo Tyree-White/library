@@ -10,3 +10,11 @@ book.prototype.info = function() {
 }
 
 const bookOne = new book('The Hobbit', 'J.R.R. Tolkien', 295, 'read');
+
+let myLibrary = [];
+
+function addBookToLibrary(book) {
+    myLibrary.push(book);
+}
+
+
