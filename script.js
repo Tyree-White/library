@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 function book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -17,4 +19,12 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+function displayBook() {
+    myLibrary.forEach(book => {
+        const bookDiv = document.createElement('div');
+        bookDiv.className = 'book';
+        body.appendChild(bookDiv)
+        console.log(book)
+    });
+}
 
