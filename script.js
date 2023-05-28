@@ -23,7 +23,7 @@ function displayBook() {
     myLibrary.forEach(book => {
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
-        body.appendChild(bookDiv)
+        body.appendChild(bookDiv);
         console.log(book)
     });
 }
