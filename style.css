@@ -36,6 +36,8 @@
     height: 10vh;
     display: flex;
     background-color: #3882f6;
+    position: sticky;
+    top: 0;
 }
 
 .info div {
