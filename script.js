@@ -24,7 +24,19 @@ function displayBook() {
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
         body.appendChild(bookDiv);
-        console.log(book)
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'title';
+        const authorDiv = document.createElement('div');
+        authorDiv.className = 'author';
+        const pagesDiv = document.createElement('div');
+        pagesDiv.className = 'pages';
+        const readDiv = document.createElement('div');
+        readDiv.className = 'read';
+        bookDiv.appendChild(titleDiv);
+        bookDiv.appendChild(authorDiv);
+        bookDiv.appendChild(pagesDiv);
+        bookDiv.appendChild(readDiv);
+        console.log(book);
     });
 }
 
