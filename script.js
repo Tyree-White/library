@@ -11,7 +11,7 @@ book.prototype.info = function() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
 }
 
-const bookOne = new book('The Hobbit', 'J.R.R. Tolkien', 295, 'read');
+const bookOne = new book('The Hobbit', 'J.R.R. Tolkien', 295, 'Read');
 
 let myLibrary = [];
 
@@ -39,10 +39,10 @@ function displayBook() {
         bookDiv.appendChild(pagesDiv);
         bookDiv.appendChild(readDiv);
 
-        titleDiv.textContent = `Title: ${book.title}`;
-        authorDiv.textContent = `Author: ${book.author}`;
-        pagesDiv.textContent = `Pages: ${book.pages}`;
-        readDiv.textContent = `Read: ${book.read}`;
+        titleDiv.textContent = `${book.title}`;
+        authorDiv.textContent = `${book.author}`;
+        pagesDiv.textContent = `${book.pages}`;
+        readDiv.textContent = ` ${book.read}`;
     });
 }
 

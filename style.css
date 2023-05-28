@@ -25,6 +25,9 @@
 .book div {
     color: white;
     font-size: 2rem;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
 }
 
 .info {
@@ -32,6 +35,11 @@
     font-size: 2rem;
     height: 10vh;
     display: flex;
-    justify-content: space-between;
     background-color: #3882f6;
+}
+
+.info div {
+    width: 25vw;
+    display: flex;
+    justify-content: center;
 }
