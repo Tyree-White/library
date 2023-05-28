@@ -24,6 +24,7 @@ function displayBook() {
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
         body.appendChild(bookDiv);
+
         const titleDiv = document.createElement('div');
         titleDiv.className = 'title';
         const authorDiv = document.createElement('div');
@@ -32,11 +33,16 @@ function displayBook() {
         pagesDiv.className = 'pages';
         const readDiv = document.createElement('div');
         readDiv.className = 'read';
+
         bookDiv.appendChild(titleDiv);
         bookDiv.appendChild(authorDiv);
         bookDiv.appendChild(pagesDiv);
         bookDiv.appendChild(readDiv);
-        console.log(book);
+
+        titleDiv.textContent = `Title: ${book.title}`;
+        authorDiv.textContent = `Author: ${book.author}`;
+        pagesDiv.textContent = `Pages: ${book.pages}`;
+        readDiv.textContent = `Read: ${book.read}`;
     });
 }
 
