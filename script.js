@@ -1,4 +1,4 @@
-const body = document.querySelector('body');
+const container = document.querySelector('.container');
 
 function book(title, author, pages, read) {
     this.title = title;
@@ -23,7 +23,7 @@ function displayBook() {
     myLibrary.forEach(book => {
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
-        body.appendChild(bookDiv);
+        container.appendChild(bookDiv);
 
         const titleDiv = document.createElement('div');
         titleDiv.className = 'title';
