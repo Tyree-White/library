@@ -46,3 +46,10 @@ function displayBook() {
     });
 }
 
+const newBook = document.querySelector('.newBook');
+const bookForm = document.querySelector('.bookInfo');
+newBook.addEventListener('click', displayForm);
+
+function displayForm() {
+    bookForm.style.display = 'flex';
+}
