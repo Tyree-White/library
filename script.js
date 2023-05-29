@@ -53,3 +53,10 @@ newBook.addEventListener('click', displayForm);
 function displayForm() {
     bookForm.style.display = 'flex';
 }
+
+const addBookBtn = document.querySelector('.add');
+addBookBtn.addEventListener('click', addBook);
+
+function addBook() {
+    bookForm.style.display = 'none';
+}
