@@ -78,3 +78,11 @@
     padding: 5vh;
     border-radius: 5vh;
 }
+
+.add {
+    color: white;
+    background: #1f2937;
+    height: 8vh;
+    width: 30vh;
+    border-radius: 4vh;
+}
