@@ -63,6 +63,10 @@ function addBook() {
     const author = document.querySelector('#author').value;
     const pages = document.querySelector('#pages').value;
     const read = document.querySelector('#read');
+    const bookDiv = document.querySelectorAll('.book');
+    bookDiv.forEach(book => {
+        book.remove();
+    })
 
     let haveRead = '';
     if (read.checked) {
