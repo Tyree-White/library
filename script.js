@@ -81,7 +81,6 @@ function addBook() {
 
     const newBook = new book(title, author, pages, haveRead);
     addBookToLibrary(newBook);
-    console.log(myLibrary);
 
     displayBook()
     bookForm.style.display = 'none';
