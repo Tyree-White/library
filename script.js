@@ -63,6 +63,7 @@ function addBook() {
     const author = document.querySelector('#author').value;
     const pages = document.querySelector('#pages').value;
     const read = document.querySelector('#read');
+
     let haveRead = '';
     if (read.checked) {
         haveRead = "Read";
@@ -74,31 +75,14 @@ function addBook() {
         return alert('Error, please fill all fields.')
     }
 
-    const bookDiv = document.createElement('div');
-    bookDiv.className = 'book';
-    container.appendChild(bookDiv);
+    const newBook = new book(title, author, pages, haveRead);
+    addBookToLibrary(newBook);
+    console.log(myLibrary);
 
-    const titleDiv = document.createElement('div');
-    titleDiv.className = 'title';
-    const authorDiv = document.createElement('div');
-    authorDiv.className = 'author';
-    const pagesDiv = document.createElement('div');
-    pagesDiv.className = 'pages';
-    const readDiv = document.createElement('div');
-    readDiv.className = 'read';
-
-    bookDiv.appendChild(titleDiv);
-    bookDiv.appendChild(authorDiv);
-    bookDiv.appendChild(pagesDiv);
-    bookDiv.appendChild(readDiv);
-
-    titleDiv.textContent = `${title}`;
-    authorDiv.textContent = `${author}`;
-    pagesDiv.textContent = `${pages}`;
-    readDiv.textContent = haveRead;
+    displayBook()
     bookForm.style.display = 'none';
 }
 
-function dontSubmit(event) {
-    event.preventDefault();
+    function dontSubmit(event) {
+        event.preventDefault();
 }
