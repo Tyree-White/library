@@ -70,6 +70,10 @@ function addBook() {
         haveRead = 'Not read';
     }
 
+    if (title === '' || author === '' || pages === '') {
+        return alert('Error, please fill all fields.')
+    }
+
     const bookDiv = document.createElement('div');
     bookDiv.className = 'book';
     container.appendChild(bookDiv);
