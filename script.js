@@ -103,6 +103,8 @@ function displayBook() {
             addBookBtn.style.display = 'none';
             const editBookBtn = document.querySelector('.edit');
             editBookBtn.style.display = 'block';
+            const read = document.querySelector('.readDivision');
+            read.style.display = 'none';
         })
     })
 }
@@ -118,6 +120,8 @@ function displayForm() {
     addBookBtn.style.display = 'block';
     const editBookBtn = document.querySelector('.edit');
     editBookBtn.style.display = 'none';
+    const read = document.querySelector('.readDivision');
+    read.style.display = 'flex';
 }
 
 const addBookBtn = document.querySelector('.add');
