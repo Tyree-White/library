@@ -93,6 +93,11 @@ function displayBook() {
             const buttonDiv = document.querySelector(`[data-index="${buttonIndex}"]`);
             buttonDiv.remove();
             myLibrary.splice(buttonIndex - 1, 1);
+            const bookDiv = document.querySelectorAll('.book')
+            bookDiv.forEach(book => {
+                book.remove();
+            })
+            displayBook();
         });
     })
     
