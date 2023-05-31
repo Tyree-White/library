@@ -99,6 +99,10 @@ function displayBook() {
         button.addEventListener('click', editBook => {
             const bookForm = document.querySelector('.bookInfo');
             bookForm.style.display = 'flex';
+            const addBookBtn = document.querySelector('.add');
+            addBookBtn.style.display = 'none';
+            const editBookBtn = document.querySelector('.edit');
+            editBookBtn.style.display = 'block';
         })
     })
 }
