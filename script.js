@@ -93,6 +93,14 @@ function displayBook() {
             myLibrary.splice(buttonIndex - 1, 1);
         });
     })
+    
+    const editBtnList = document.querySelectorAll('.editBtn');
+    editBtnList.forEach(button => {
+        button.addEventListener('click', editBook => {
+            const bookForm = document.querySelector('.bookInfo');
+            bookForm.style.display = 'flex';
+        })
+    })
 }
 
 const newBookBtn = document.querySelector('.newBookBtn');
