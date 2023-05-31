@@ -38,11 +38,11 @@ function displayBook() {
         pagesDiv.className = 'pages';
         const readDiv = document.createElement('div');
         readDiv.className = 'read';
-        readDiv.dataset.index = i;
+        readDiv.dataset.index = `${i}-read`;
         const statusBtn = document.createElement('button');
         statusBtn.className = 'statusBtn';
         statusBtn.type = 'button';
-        statusBtn.dataset.index = i;
+        statusBtn.dataset.index =  i;
         statusBtn.textContent = 'Change Read Status';
         const editBtn = document.createElement('button');
         editBtn.className = 'editBtn';
@@ -67,6 +67,19 @@ function displayBook() {
         authorDiv.textContent = `${book.author}`;
         pagesDiv.textContent = `${book.pages}`;
         readDiv.textContent = ` ${book.read}`;
+    });
+
+    const changeStatusBtnList = document.querySelectorAll('.statusBtn');
+    changeStatusBtnList.forEach(button => {
+        button.addEventListener('click', changeStatus => {
+            let buttonIndex = Number(button.getAttribute('data-index'));
+            const buttonDiv = document.querySelector(`[data-index="${buttonIndex}-read"]`);
+            if (buttonDiv.textContent === 'Read') {
+                buttonDiv.textContent = 'Not Read';
+            } else {
+                buttonDiv.textContent = 'Read';
+            }
+        });
     });
 }
 
@@ -96,7 +109,7 @@ function addBook() {
     if (read.checked) {
         haveRead = "Read";
     } else {
-        haveRead = 'Not read';
+        haveRead = 'Not Read';
     }
 
     if (title === '' || author === '' || pages === '') {
