@@ -114,6 +114,10 @@ bookForm.addEventListener('submit', dontSubmit);
 
 function displayForm() {
     bookForm.style.display = 'flex';
+    const addBookBtn = document.querySelector('.add');
+    addBookBtn.style.display = 'block';
+    const editBookBtn = document.querySelector('.edit');
+    editBookBtn.style.display = 'none';
 }
 
 const addBookBtn = document.querySelector('.add');
