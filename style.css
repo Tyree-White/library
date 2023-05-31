@@ -56,7 +56,8 @@
 }
 
 .footer button,
-.add {
+.add,
+.edit {
     color: white;
     background: #1f2937;
     height: 8vh;
@@ -83,4 +84,8 @@
 .statusBtn {
     display: block;
     justify-content: end;
+}
+
+.edit {
+    display: none;
 }
