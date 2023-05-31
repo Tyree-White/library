@@ -20,9 +20,14 @@ function addBookToLibrary(book) {
 }
 
 function displayBook() {
+    let i = 0;
     myLibrary.forEach(book => {
+        i++
+        console.log(i)
+
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
+        bookDiv.dataset.index = i;
         container.appendChild(bookDiv);
 
         const titleDiv = document.createElement('div');
@@ -33,17 +38,21 @@ function displayBook() {
         pagesDiv.className = 'pages';
         const readDiv = document.createElement('div');
         readDiv.className = 'read';
+        readDiv.dataset.index = i;
         const statusBtn = document.createElement('button');
         statusBtn.className = 'statusBtn';
         statusBtn.type = 'button';
+        statusBtn.dataset.index = i;
         statusBtn.textContent = 'Change Read Status';
         const editBtn = document.createElement('button');
         editBtn.className = 'editBtn';
         editBtn.type = 'button';
+        editBtn.dataset.index = i;
         editBtn.textContent = 'Edit';
         const deleteBtn = document.createElement('button');
         deleteBtn.className = 'deleteBtn';
         deleteBtn.type = 'button';
+        deleteBtn.dataset.index = i;
         deleteBtn.textContent = 'Delete';
 
         bookDiv.appendChild(titleDiv);
@@ -53,7 +62,7 @@ function displayBook() {
         bookDiv.appendChild(statusBtn);
         bookDiv.appendChild(editBtn);
         bookDiv.appendChild(deleteBtn);
-        
+
         titleDiv.textContent = `${book.title}`;
         authorDiv.textContent = `${book.author}`;
         pagesDiv.textContent = `${book.pages}`;
