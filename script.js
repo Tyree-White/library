@@ -81,6 +81,17 @@ function displayBook() {
             }
         });
     });
+
+    const deleteBtnList = document.querySelectorAll('.deleteBtn');
+    deleteBtnList.forEach(button => {
+        button.addEventListener('click', deleteBook => {
+            let buttonIndex = Number(button.getAttribute('data-index'));
+            const buttonDiv = document.querySelector(`[data-index="${buttonIndex}"]`);
+            buttonDiv.remove();
+            myLibrary.splice(buttonIndex - 1, 1);
+            console.log(myLibrary);
+        });
+    })
 }
 
 const newBookBtn = document.querySelector('.newBookBtn');
