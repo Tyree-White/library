@@ -76,8 +76,10 @@ function displayBook() {
             const buttonDiv = document.querySelector(`[data-index="${buttonIndex}-read"]`);
             if (buttonDiv.textContent === 'Read') {
                 buttonDiv.textContent = 'Not Read';
+                myLibrary[buttonIndex - 1].read = 'Not Read';
             } else {
                 buttonDiv.textContent = 'Read';
+                myLibrary[buttonIndex - 1].read = 'Read';
             }
         });
     });
@@ -89,7 +91,6 @@ function displayBook() {
             const buttonDiv = document.querySelector(`[data-index="${buttonIndex}"]`);
             buttonDiv.remove();
             myLibrary.splice(buttonIndex - 1, 1);
-            console.log(myLibrary);
         });
     })
 }
