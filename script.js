@@ -23,7 +23,6 @@ function displayBook() {
     let i = 0;
     myLibrary.forEach(book => {
         i++
-        console.log(i)
 
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
@@ -108,6 +107,25 @@ function displayBook() {
             editBookBtn.style.display = 'block';
             const read = document.querySelector('.readDivision');
             read.style.display = 'none';
+            let buttonIndex = Number(button.getAttribute('data-index'));
+            console.log(buttonIndex);
+            editBookBtn.addEventListener('click', editBook => {
+                const title = document.querySelector('#title').value;
+                const author = document.querySelector('#author').value;
+                const pages = document.querySelector('#pages').value;
+                const titleDiv = document.querySelector(`[data-index="${buttonIndex}-title"]`);
+                const authorDiv = document.querySelector(`[data-index="${buttonIndex}-author"]`);
+                const pagesDiv = document.querySelector(`[data-index="${buttonIndex}-pages"]`);
+                
+                titleDiv.textContent = title;
+                authorDiv.textContent = author;
+                pagesDiv.textContent = pages;
+                bookForm.style.display = 'none';
+
+                myLibrary[buttonIndex - 1].title = title;
+                myLibrary[buttonIndex - 1].author = author;
+                myLibrary[buttonIndex - 1].pages = pages;
+            })
         })
     })
 }
