@@ -18,14 +18,13 @@
     background: #1f2937;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0px 2rem;
 }
 
 .book div {
     color: white;
     font-size: 2rem;
-    width: 25vw;
+    width: 14.28vw;
     display: flex;
     justify-content: center;
 }
@@ -42,7 +41,7 @@
 }
 
 .info div {
-    width: 25vw;
+    width: 14.28vw;
     display: flex;
     justify-content: center;
 }
