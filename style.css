@@ -80,3 +80,8 @@
     padding: 5vh;
     border-radius: 5vh;
 }
+
+.statusBtn {
+    display: block;
+    justify-content: end;
+}

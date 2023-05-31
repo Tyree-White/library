@@ -33,11 +33,16 @@ function displayBook() {
         pagesDiv.className = 'pages';
         const readDiv = document.createElement('div');
         readDiv.className = 'read';
+        const statusBtn = document.createElement('button');
+        statusBtn.className = 'statusBtn';
+        statusBtn.type = 'button';
+        statusBtn.textContent = 'Change Read Status';
 
         bookDiv.appendChild(titleDiv);
         bookDiv.appendChild(authorDiv);
         bookDiv.appendChild(pagesDiv);
         bookDiv.appendChild(readDiv);
+        bookDiv.appendChild(statusBtn);
 
         titleDiv.textContent = `${book.title}`;
         authorDiv.textContent = `${book.author}`;
