@@ -89,3 +89,12 @@
 .edit {
     display: none;
 }
+
+.book button {
+    color: #e5e7eb;
+    background: #3882f6;
+    height: 7vh;
+    width: 20vh;
+    border-radius: 3vh;
+    font-size: 2.5vh;
+}
