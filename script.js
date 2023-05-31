@@ -37,13 +37,23 @@ function displayBook() {
         statusBtn.className = 'statusBtn';
         statusBtn.type = 'button';
         statusBtn.textContent = 'Change Read Status';
+        const editBtn = document.createElement('button');
+        editBtn.className = 'editBtn';
+        editBtn.type = 'button';
+        editBtn.textContent = 'Edit';
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'deleteBtn';
+        deleteBtn.type = 'button';
+        deleteBtn.textContent = 'Delete';
 
         bookDiv.appendChild(titleDiv);
         bookDiv.appendChild(authorDiv);
         bookDiv.appendChild(pagesDiv);
         bookDiv.appendChild(readDiv);
         bookDiv.appendChild(statusBtn);
-
+        bookDiv.appendChild(editBtn);
+        bookDiv.appendChild(deleteBtn);
+        
         titleDiv.textContent = `${book.title}`;
         authorDiv.textContent = `${book.author}`;
         pagesDiv.textContent = `${book.pages}`;
