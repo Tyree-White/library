@@ -32,10 +32,13 @@ function displayBook() {
 
         const titleDiv = document.createElement('div');
         titleDiv.className = 'title';
+        titleDiv.dataset.index = `${i}-title`;
         const authorDiv = document.createElement('div');
         authorDiv.className = 'author';
+        authorDiv.dataset.index = `${i}-author`;
         const pagesDiv = document.createElement('div');
         pagesDiv.className = 'pages';
+        pagesDiv.dataset.index = `${i}-pages`;
         const readDiv = document.createElement('div');
         readDiv.className = 'read';
         readDiv.dataset.index = `${i}-read`;
