@@ -130,6 +130,7 @@ function displayBook() {
                 myLibrary[buttonIndex - 1].title = title;
                 myLibrary[buttonIndex - 1].author = author;
                 myLibrary[buttonIndex - 1].pages = pages;
+                buttonIndex = undefined;
             })
         })
     })
